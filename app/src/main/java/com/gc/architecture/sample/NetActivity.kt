@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.gc.architecture.R
-import com.gc.common.base.BaseActivity
+import com.gc.architecture.base.BaseActivity
 
 class NetActivity : BaseActivity(), NetView {
     private lateinit var text: TextView
@@ -15,7 +15,7 @@ class NetActivity : BaseActivity(), NetView {
         setContentView(R.layout.activity_test)
         text = findViewById(R.id.text)
 
-        presenter = NetPresenter()
+        presenter = NetPresenter(mAppContext)
         presenter.attachView(this)
         addPresenters(presenter)
     }

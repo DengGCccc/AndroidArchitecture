@@ -1,4 +1,4 @@
-package com.gc.common.base
+package com.gc.architecture.base
 
 import android.content.Context
 import android.os.Bundle

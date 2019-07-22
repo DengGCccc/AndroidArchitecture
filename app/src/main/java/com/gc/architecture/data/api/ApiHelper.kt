@@ -1,16 +1,15 @@
-package com.gc.architecture.sample
+package com.gc.architecture.data.api
 
-import com.gc.architecture.data.api.TestApi
 import com.gc.architecture.data.bean.UserBean
 import com.gc.common.net.Callback
 import com.gc.common.net.NormalObserver
 import java.util.HashMap
 
 /**
- * Created by Deng on 2019-07-18.
+ * Created by Deng on 2019-07-22.
  */
-class NetModel {
-    fun getUserInfo(callback: Callback<UserBean>?) {
+class ApiHelper : IApiHelper {
+    override fun getUserInfo(callback: Callback<UserBean>?) {
         val map = HashMap<String, Any>()
         map.put("uid", "AP170102105451")
 

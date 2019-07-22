@@ -1,4 +1,4 @@
-package com.gc.architecture.sample
+package com.gc.architecture.data.bean
 
 /**
  * Created by Deng on 2018/7/25.
@@ -6,4 +6,5 @@ package com.gc.architecture.sample
 class UserBean {
     var name: String? = null
     var age: Int = 0
+    var userid: String? = null
 }

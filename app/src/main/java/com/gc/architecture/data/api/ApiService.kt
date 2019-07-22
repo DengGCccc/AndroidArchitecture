@@ -1,5 +1,6 @@
-package com.gc.architecture.sample
+package com.gc.architecture.data.api
 
+import com.gc.architecture.data.bean.UserBean
 import com.gc.common.net.NormalResult
 import io.reactivex.Observable
 import okhttp3.RequestBody

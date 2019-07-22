@@ -1,6 +1,6 @@
-package com.gc.architecture.sample
+package com.gc.architecture.data.api
 
-import android.widget.Toast
+import com.gc.architecture.data.bean.UserBean
 import com.gc.common.utils.RuntimeContext
 import com.gc.common.net.BaseApi
 import com.gc.common.net.NormalObserver

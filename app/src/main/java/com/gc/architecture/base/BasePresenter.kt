@@ -1,12 +1,16 @@
-package com.gc.common.base
+package com.gc.architecture.base
 
+import com.gc.architecture.IAppContext
+import com.gc.architecture.data.IDataManager
 import com.gc.common.mvp.IMvpPresenter
 import com.gc.common.mvp.IMvpView
 
 /**
  * Created by Deng on 2018/7/25.
  */
-open class BasePresenter<V : IMvpView> : IMvpPresenter<V> {
+open class BasePresenter<V : IMvpView>(appContext: IAppContext) : IMvpPresenter<V> {
+    var mAppContext: IAppContext = appContext
+
     /**
      * 绑定的view
      */
@@ -24,5 +28,9 @@ open class BasePresenter<V : IMvpView> : IMvpPresenter<V> {
      */
     override fun detachView() {
         this.view = null
+    }
+
+    fun getDataManager(): IDataManager {
+        return mAppContext?.getDataManager()
     }
 }
