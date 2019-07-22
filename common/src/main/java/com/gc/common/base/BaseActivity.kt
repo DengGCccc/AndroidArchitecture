@@ -1,9 +1,10 @@
 package com.gc.common.base
 
-import android.app.ProgressDialog
 import android.support.v4.app.FragmentActivity
 import android.widget.Toast
 import com.gc.common.mvp.IMvpView
+import com.gc.common.utils.CommonProgressDialog
+import com.gc.common.utils.ToastUtils
 import java.util.HashSet
 
 /**
@@ -13,11 +14,11 @@ abstract class BaseActivity : FragmentActivity(), IMvpView {
 
     private val presenterSet = HashSet<BasePresenter<*>>()
 
-    private var mProgressDialog: ProgressDialog? = null
+    private var mProgressDialog: CommonProgressDialog? = null
 
     override fun showLoading() {
         if (null == mProgressDialog) {
-            mProgressDialog = ProgressDialog(this)
+            mProgressDialog = CommonProgressDialog(this)
             mProgressDialog!!.setCancelable(true)
         }
 
@@ -33,7 +34,7 @@ abstract class BaseActivity : FragmentActivity(), IMvpView {
     }
 
     override fun showToast(msg: String) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+        ToastUtils.showToast(this, msg)
     }
 
     protected fun addPresenters(presenter: BasePresenter<*>) {

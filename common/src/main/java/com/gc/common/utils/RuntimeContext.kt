@@ -7,4 +7,5 @@ import android.content.Context
  */
 object RuntimeContext {
     lateinit var sApplicationContext: Context
+    var sIsDebuggable = false
 }

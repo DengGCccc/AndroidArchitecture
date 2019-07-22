@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".test_net.NetActivity"/>
+        <activity android:name=".sample.NetActivity"/>
     </application>
 
 </manifest>

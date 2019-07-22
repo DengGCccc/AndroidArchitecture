@@ -1,6 +1,6 @@
 package com.gc.common.net
 
-import com.gc.common.utils.logger.AppLogger
+import com.gc.common.utils.logger.AppLog
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 
@@ -11,7 +11,7 @@ abstract class NormalObserver<T> : Observer<NormalResult<T>> {
     override fun onNext(result: NormalResult<T>) {
         if (result.code == SUCCESS_CODE) {
             val t = result.data
-            AppLogger.i("result: $t")
+            AppLog.i("result: $t")
             onSuccess(t)
         } else {
             onError(result.code, result.msg)
@@ -19,13 +19,13 @@ abstract class NormalObserver<T> : Observer<NormalResult<T>> {
     }
 
     override fun onError(e: Throwable) {
-        AppLogger.e("error:$e")
+        AppLog.e("error:$e")
         onError(UNKNOWN_ERROR, e.message)
         onComplete()
     }
 
     override fun onComplete() {
-        AppLogger.i("onComplete")
+        AppLog.i("onComplete")
     }
 
     abstract fun onSuccess(result: T?)

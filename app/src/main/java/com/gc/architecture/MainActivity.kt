@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.gc.architecture.test_net.NetActivity
+import com.gc.architecture.sample.NetActivity
 
 /**
  * Created by Deng on 2018/7/25.

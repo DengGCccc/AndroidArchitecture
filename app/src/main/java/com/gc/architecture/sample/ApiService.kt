@@ -1,4 +1,4 @@
-package com.gc.architecture.test_net
+package com.gc.architecture.sample
 
 import com.gc.common.net.NormalResult
 import io.reactivex.Observable

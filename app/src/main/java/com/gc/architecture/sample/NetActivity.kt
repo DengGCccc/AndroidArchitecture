@@ -1,4 +1,4 @@
-package com.gc.architecture.test_net
+package com.gc.architecture.sample
 
 import android.os.Bundle
 import android.view.View

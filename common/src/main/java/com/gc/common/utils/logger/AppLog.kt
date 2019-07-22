@@ -1,15 +1,12 @@
 package com.gc.common.utils.logger
 
 import android.util.Log
+import com.gc.common.utils.RuntimeContext
 
-import com.gc.common.BuildConfig
-import com.gc.common.R
-import com.gc.common.utils.ResourceUtils
-
-object AppLogger {
+object AppLog {
 
     fun init() {
-        if (BuildConfig.DEBUG) {
+        if (RuntimeContext.sIsDebuggable) {
             Timber.plant(Timber.DebugTree())
         } else {
             Timber.plant(ReleaseTree())

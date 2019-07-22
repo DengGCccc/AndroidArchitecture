@@ -1,4 +1,4 @@
-package com.gc.architecture.test_net
+package com.gc.architecture.sample
 
 /**
  * Created by Deng on 2018/7/25.
