@@ -14,20 +14,20 @@ open class BasePresenter<V : IMvpView>(appContext: IAppContext) : IMvpPresenter<
     /**
      * 绑定的view
      */
-    var view: V? = null
+    var mView: V? = null
 
     /**
      * 绑定view，一般在初始化中调用该方法
      */
     override fun attachView(mvpView: V) {
-        this.view = mvpView
+        this.mView = mvpView
     }
 
     /**
      * 断开view，已在BaseActivity onDestroy中调用
      */
     override fun detachView() {
-        this.view = null
+        this.mView = null
     }
 
     fun getDataManager(): IDataManager {

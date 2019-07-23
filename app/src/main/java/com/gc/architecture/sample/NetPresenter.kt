@@ -22,17 +22,17 @@ class NetPresenter(appContext: IAppContext) : BasePresenter<NetView>(appContext)
      * @param params 参数
      */
     fun getUserInfo() {
-        view?.showLoading()
+        mView?.showLoading()
 
         getDataManager().getUserInfo(object : Callback<UserBean> {
             override fun onSuccess(data: UserBean?) {
-                view?.showData(data?.name + "====" + data?.age)
+                mView?.showData(data?.name + "====" + data?.age)
                 mAppContext.getDataManager().saveUid(data?.userid)
             }
 
             override fun onComplete() {
                 super.onComplete()
-                view?.hideLoading()
+                mView?.hideLoading()
             }
         })
     }

@@ -8,11 +8,10 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.gc.common.task.CommonTaskExecutor
 import com.gc.common.utils.logger.AppLog
-import io.reactivex.Observable
 
 object ToastUtils {
 
-    const val TAG = "ToastUtils"
+    private const val TAG = "ToastUtils"
 
     @Volatile
     private var sCustomToast: ICustomToast? = null
