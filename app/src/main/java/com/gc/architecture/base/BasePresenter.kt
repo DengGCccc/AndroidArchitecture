@@ -31,6 +31,6 @@ open class BasePresenter<V : IMvpView>(appContext: IAppContext) : IMvpPresenter<
     }
 
     fun getDataManager(): IDataManager {
-        return mAppContext?.getDataManager()
+        return mAppContext.getDataManager()
     }
 }

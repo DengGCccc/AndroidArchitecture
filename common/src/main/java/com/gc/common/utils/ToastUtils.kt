@@ -12,6 +12,8 @@ import io.reactivex.Observable
 
 object ToastUtils {
 
+    const val TAG = "ToastUtils"
+
     @Volatile
     private var sCustomToast: ICustomToast? = null
 
@@ -37,7 +39,7 @@ object ToastUtils {
         }
 
         val command = Runnable {
-            AppLog.i("ToastUtils", "%s", message)
+            AppLog.i(TAG, "$message")
             if (Build.VERSION.SDK_INT == Build.VERSION_CODES.N_MR1 || TextUtils.equals(Build.BRAND, "Meizu")) {
                 if (sCustomToast != null) {
                     if (sCustomToast!!.canHack()) {
@@ -79,7 +81,7 @@ object ToastUtils {
         }
 
         val command = Runnable {
-            AppLog.i("ToastUtils", "%s", message)
+            AppLog.i(TAG, "$message")
             if (!needToHack()) {
                 val toast = Toast.makeText(context, message, length)
                 toast.show()

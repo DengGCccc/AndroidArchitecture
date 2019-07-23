@@ -20,11 +20,12 @@ class RetrofitFactory private constructor() {
         val loggingInterceptor = HttpLoggingInterceptor()
 
         // 开发模式记录整个body，否则只记录基本信息如返回200，http协议版本等
-        if (RuntimeContext.sIsDebuggable) {
-            loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        } else {
-            loggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
-        }
+//        if (RuntimeContext.sIsDebuggable) {
+//            loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+//        } else {
+//            loggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
+//        }
+        loggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
 
         val httpClient = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)

@@ -9,9 +9,10 @@ abstract class NormalObserver<T> : Observer<NormalResult<T>> {
     override fun onSubscribe(d: Disposable) {}
 
     override fun onNext(result: NormalResult<T>) {
+        AppLog.i(TAG, "code: ${result.code}")
+
         if (result.code == SUCCESS_CODE) {
             val t = result.data
-            AppLog.i("result: $t")
             onSuccess(t)
         } else {
             onError(result.code, result.msg)
@@ -19,13 +20,13 @@ abstract class NormalObserver<T> : Observer<NormalResult<T>> {
     }
 
     override fun onError(e: Throwable) {
-        AppLog.e("error:$e")
+        AppLog.e(TAG, "error:$e")
         onError(UNKNOWN_ERROR, e.message)
         onComplete()
     }
 
     override fun onComplete() {
-        AppLog.i("onComplete")
+        AppLog.i(TAG, "onComplete")
     }
 
     abstract fun onSuccess(result: T?)
@@ -34,6 +35,8 @@ abstract class NormalObserver<T> : Observer<NormalResult<T>> {
     }
 
     companion object {
+        const val TAG = "NormalObserver"
+
         const val SUCCESS_CODE = 0
         const val UNKNOWN_ERROR = 9999
     }

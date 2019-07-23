@@ -25,19 +25,23 @@ object AppLog {
         }
     }
 
-    fun d(s: String, vararg objects: Any) {
+    fun d(s: String, vararg objects: Any?) {
         Timber.d(s, *objects)
     }
 
-    fun i(s: String, vararg objects: Any) {
-        Timber.i(s, *objects)
+//    fun i(s: String, vararg objects: Any) {
+//        Timber.i(s, *objects)
+//    }
+
+    fun i(tag: String, log: String?) {
+        Log.i(tag, log)
     }
 
-    fun w(s: String, vararg objects: Any) {
+    fun w(s: String, vararg objects: Any?) {
         Timber.w(s, *objects)
     }
 
-    fun e(s: String, vararg objects: Any) {
+    fun e(s: String, vararg objects: Any?) {
         Timber.e(s, *objects)
     }
 }
