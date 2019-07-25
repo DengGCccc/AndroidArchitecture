@@ -10,6 +10,12 @@
         android:text="TestNetwork"
         android:onClick="btnClick"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BigModule"
+        android:onClick="btnClick2"/>
+
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="match_parent"

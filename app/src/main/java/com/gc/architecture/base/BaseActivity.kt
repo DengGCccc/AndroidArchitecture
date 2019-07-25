@@ -12,7 +12,7 @@ import java.util.HashSet
 /**
  * Created by Deng on 2018/7/25.
  */
-abstract class BaseActivity : FragmentActivity(), IMvpView {
+abstract class BaseActivity : FragmentActivity(), IBaseView {
     lateinit var mAppContext: IAppContext
 
     private val presenterSet = HashSet<BasePresenter<*>>()

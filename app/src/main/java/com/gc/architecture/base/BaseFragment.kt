@@ -11,7 +11,7 @@ import com.gc.common.mvp.IMvpView
 /**
  * Created by Deng on 2018/7/25.
  */
-abstract class BaseFragment : Fragment(), IMvpView {
+abstract class BaseFragment : Fragment(), IBaseView {
     abstract val contentViewId: Int
 
     protected open var mContext: Context? = null

@@ -6,7 +6,7 @@ import android.widget.TextView
 import com.gc.architecture.R
 import com.gc.architecture.base.BaseActivity
 
-class NetActivity : BaseActivity(), NetView {
+class NetActivity : BaseActivity(), INetView {
     private lateinit var text: TextView
     private lateinit var presenter: NetPresenter
 

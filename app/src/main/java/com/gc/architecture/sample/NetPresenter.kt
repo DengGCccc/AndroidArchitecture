@@ -10,7 +10,7 @@ import com.gc.common.utils.logger.AppLog
 /**
  * Created by Deng on 2018/7/25.
  */
-class NetPresenter(appContext: IAppContext) : BasePresenter<NetView>(appContext), IUserInfoChangerListener {
+class NetPresenter(appContext: IAppContext) : BasePresenter<INetView>(appContext), IUserInfoChangerListener {
 
     init {
         appContext.getDataManager().addUserInfoChangedListener(this)

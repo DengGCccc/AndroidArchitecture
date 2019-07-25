@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.gc.architecture.module.ModuleActivity
 import com.gc.architecture.sample.NetActivity
 
 /**
@@ -19,5 +20,9 @@ class MainActivity : Activity() {
 
     fun btnClick(v: View) {
         startActivity(Intent(this, NetActivity::class.java))
+    }
+
+    fun btnClick2(v: View) {
+        startActivity(Intent(this, ModuleActivity::class.java))
     }
 }

@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name=".sample.NetActivity"/>
+        <activity android:name=".module.ModuleActivity"/>
     </application>
 
 </manifest>

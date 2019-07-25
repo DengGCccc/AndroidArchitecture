@@ -1,10 +1,10 @@
 package com.gc.architecture.sample
 
-import com.gc.common.mvp.IMvpView
+import com.gc.architecture.base.IBaseView
 
 /**
  * Created by Deng on 2018/7/25.
  */
-interface NetView : IMvpView {
+interface INetView : IBaseView {
     fun showData(data: String?)
 }
